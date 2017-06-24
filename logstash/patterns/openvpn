@@ -1,0 +1,2 @@
+TIMESTAMP_ISO860A %{DAY} %{MONTH} %{MONTHDAY} %{TIME} %{YEAR} 
+TLS_11 TLS: Username/Password authentication succeeded for username
