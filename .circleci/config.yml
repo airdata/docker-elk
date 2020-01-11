@@ -1,8 +1,6 @@
 version: 2.1 # use CircleCI 2.1
 jobs:
   build_jenkins:
-    docker:
-      - image: circleci/php:7.1-node-browsers
     working_directory: ~/kibana-in-docker
 
     steps:
