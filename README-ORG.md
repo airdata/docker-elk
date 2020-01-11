@@ -1,6 +1,7 @@
 # Docker ELK stack
+[![CircleCI](https://img.shields.io/circleci/project/github/airdata/kibana-in-docker.svg)](https://circleci.com/gh/airdata/kibana-in-docker) 
 
-[![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Elastic Stack version](https://img.shields.io/badge/ELK-5.4.2-blue.svg?style=flat)](https://github.com/deviantony/docker-elk/issues/139)
+
 
 Run the latest version of the ELK (Elasticsearch, Logstash, Kibana) stack with Docker and Docker Compose.
 
@@ -21,25 +22,30 @@ Based on the official Docker images:
 
 ## Contents
 
-1. [Requirements](#requirements)
-   * [Host setup](#host-setup)
-   * [SELinux](#selinux)
-2. [Getting started](#getting-started)
-   * [Bringing up the stack](#bringing-up-the-stack)
-   * [Initial setup](#initial-setup)
-3. [Configuration](#configuration)
-   * [How can I tune the Kibana configuration?](#how-can-i-tune-the-kibana-configuration)
-   * [How can I tune the Logstash configuration?](#how-can-i-tune-the-logstash-configuration)
-   * [How can I tune the Elasticsearch configuration?](#how-can-i-tune-the-elasticsearch-configuration)
-   * [How can I scale out the Elasticsearch cluster?](#how-can-i-scale-up-the-elasticsearch-cluster)
-4. [Storage](#storage)
-   * [How can I persist Elasticsearch data?](#how-can-i-persist-elasticsearch-data)
-5. [Extensibility](#extensibility)
-   * [How can I add plugins?](#how-can-i-add-plugins)
-   * [How can I enable the provided extensions?](#how-can-i-enable-the-provided-extensions)
-6. [JVM tuning](#jvm-tuning)
-   * [How can I specify the amount of memory used by a service?](#how-can-i-specify-the-amount-of-memory-used-by-a-service)
-   * [How can I enable a remote JMX connection to a service?](#how-can-i-enable-a-remote-jmx-connection-to-a-service)
+- [Docker ELK stack](#docker-elk-stack)
+  - [Contents](#contents)
+  - [Requirements](#requirements)
+    - [Host setup](#host-setup)
+    - [SELinux](#selinux)
+  - [Usage](#usage)
+    - [Bringing up the stack](#bringing-up-the-stack)
+  - [Initial setup](#initial-setup)
+    - [Default Kibana index pattern creation](#default-kibana-index-pattern-creation)
+      - [Via the Kibana web UI](#via-the-kibana-web-ui)
+      - [On the command line](#on-the-command-line)
+  - [Configuration](#configuration)
+    - [How can I tune the Kibana configuration?](#how-can-i-tune-the-kibana-configuration)
+    - [How can I tune the Logstash configuration?](#how-can-i-tune-the-logstash-configuration)
+    - [How can I tune the Elasticsearch configuration?](#how-can-i-tune-the-elasticsearch-configuration)
+    - [How can I scale out the Elasticsearch cluster?](#how-can-i-scale-out-the-elasticsearch-cluster)
+  - [Storage](#storage)
+    - [How can I persist Elasticsearch data?](#how-can-i-persist-elasticsearch-data)
+  - [Extensibility](#extensibility)
+    - [How can I add plugins?](#how-can-i-add-plugins)
+    - [How can I enable the provided extensions?](#how-can-i-enable-the-provided-extensions)
+  - [JVM tuning](#jvm-tuning)
+    - [How can I specify the amount of memory used by a service?](#how-can-i-specify-the-amount-of-memory-used-by-a-service)
+    - [How can I enable a remote JMX connection to a service?](#how-can-i-enable-a-remote-jmx-connection-to-a-service)
 
 ## Requirements
 
