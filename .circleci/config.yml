@@ -1,7 +1,7 @@
 version: 2.1 # use CircleCI 2.1
 jobs:
   build_jenkins:
-    machine:
+    machine: true
     working_directory: ~/kibana-in-docker
 
     steps:
